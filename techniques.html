@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Techniques</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Proper Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Bootstap Script -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- Icons from FontAwesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js">  </script>
+    <!-- Font styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <!-- Customised CSS -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <section id="menu">
+      <div class="container-fluids bar">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <a class="bar nav-link navbar-brand" href="index.html">ciliateLab</a>
+          <button type="button" class="navbar-toggler menu-button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a href="classification.php" class="nav-link">Classification</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://drive.google.com/drive/folders/1WvQjiar4y0wb2nYeaSB5odtuw-9FcdgB?usp=sharing" class="nav-link">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a href="aboutus.html" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="techniques.html" class="nav-link">Techniques</a>
+              </li>
+              <li class="nav-item">
+                <a href="projects.html" class="nav-link">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a href="publication.html" class="nav-link">Publication</a>
+              </li>
+              </ul>
+            </div>
+        </nav>
+      </div>
+    </section>
+
+    <section id="title">
+      <div class="container-fluids">
+        <h1 class="title-text">METHODS OF CILIATE IDENTIFICATION</h1>
+
+      </div>
+    </section>
+
+    <section class="method-option">
+      <div class="row">
+        <select class="options btn btn-lg btn-dark" id="selecting-option" onchange="cells()">
+          <option class="btn btn-dark btn-lg options dropdown-toggle col-lg-2 col-md-6" type="button" value="">-- Select An Option --</option>
+          <option class="btn btn-dark btn-lg options dropdown-toggle col-lg-2 col-md-6" type="button">Live Cell</option>
+          <option class="btn btn-dark btn-lg options dropdown-toggle col-lg-2 col-md-6" type="button">Opt</option>
+          <option class="btn btn-dark btn-lg options dropdown-toggle col-lg-2 col-md-6" type="button">Opie</option>
+          <option class="btn btn-dark btn-lg options dropdown-toggle col-lg-2 col-md-6" type="button">Opoju</option>
+          <option class="btn btn-dark btn-lg options dropdown-toggle col-lg-2 col-md-6" type="button">jsdygf</option>
+        </select>
+
+        <div class="method-display col-lg-4 col-md-8" >
+          <center><h1>Method 1</h1></center>
+          <p id="method1"></p>
+
+        </div>
+        <div class="method-display col-lg-4">
+          <center><h1>Method 2</h1></center>
+          <p id="method2"></p>
+
+        </div>
+      </div>
+
+    </section>
+
+    <footer id="footer">
+      <i class="social-icon fab fa-facebook-f"></i>
+      <i class="social-icon fab fa-twitter"></i>
+      <i class="social-icon fab fa-instagram"></i>
+      <i class="social-icon fas fa-envelope"></i>
+      <p class="copyright">© Copyright 2020 ACHARYA NARENDRA DEV COLLEGE</p>
+
+    </footer>
+
+
+    <script type="text/javascript">
+    var live1=["Cells are picked and dropped on a non-greasy clean slide.",
+    "Cells are immobilized or slowed down first by using Protoslo (Carolina Biological Supply Co)/methyl cellulose/polyoxresin WSR. (All of these increase the viscosity of the water, thereby slowing the movement of the organism).",
+    "Photomicrographs can be recorded with a camera mounted on the microscope only after the cells are proprly immobilized.",
+    "Ciliature can be studied to some extent"];
+    var live2=["Select and pick cells using an appropriate micropipette and place them on a slide in a very small drop of fluid.",
+    "Excess water/medium is removed",
+    "the slide is covered with a coverslip after applying Vaseline/ petroleum jelly at the corners of the coverslip. Thepetroleum jelly corners are pressed with a mounted needle until the ciliates become slightly squeezed between the slide and the coverslip [28].",
+    "Photomicrographs can be recorded with a camera mounted on the microscope only after the cells are properly immobilized.",
+    "Ciliature can be studied to some extent. Scanning electron microscopy (SEM) SEM allows a three-dimensional view of the ciliates and details can be documented which are difficult to reveal with other methods.",
+    "Cells were fixed in Parducz fixative containing four parts 2% osmiumtetroxide (OsO4) and one part saturated mercuric chloride(HgCl2) for 30 min.",
+    "The cells are then washed in 0.05 M Na-cacodylatebuffer (five times)",
+    "The cells are transferred with a drop of buffer to the preparation chamber.",
+    "The chamber is then dehydrated using alcohol series"];
+    var opp1=["Ghatampur","Mujaffarpur","Patna"];
+    function cells()
+    {
+      var op1="";
+      var op2="";
+      var state=document.getElementById("selecting-option").value;
+      if(state=="")
+      {
+        alert("Please Select an option");
+        document.getElementById("method1").innerHTML="";
+      }
+      else if(state=="Live Cell")
+      {
+        op1+="<ul type=\"disk\">";
+        for(var i=0;i<(live1.length);i++)
+        {
+          op1+="<li>"+live1[i]+"</li>"
+        }
+        op1+="</ul>";
+        document.getElementById("method1").innerHTML="<p></p>"+op1;
+        op2+="<ul type=\"disk\">";
+        for(var i=0;i<(live2.length);i++)
+        {
+          op2+="<li>"+live2[i]+"</li>"
+        }
+        op2+="</ul>";
+        document.getElementById("method2").innerHTML="<p></p>"+op2;
+      }
+      else if(state=="Opt")
+      {
+        op1+="<select>";
+        for(var i=0;i<live2.length;i++)
+        {
+          op1+="<option>"+live2[i]+"</option>"
+        }
+        op1+="</select>";
+        document.getElementById("method1").innerHTML="<p>Select City</p>"+op1;
+      }
+      else if(state=="Opie")
+      {
+        op1+="<select>";
+        for(var i=0;i<opp1.length;i++)
+        {
+          op1+="<option>"+opp1[i]+"</option>"
+        }
+        op1+="</select>";
+        document.getElementById("method2").innerHTML="<p>Select City</p>"+op1;
+      }
+    }
+    </script>
+  </body>
+</html>

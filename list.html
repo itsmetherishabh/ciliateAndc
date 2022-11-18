@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Proper Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Bootstap Script -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- Icons from FontAwesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js">  </script>
+    <!-- Font styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <!-- Customised CSS -->
+    <style>
+      .collapsible {
+        <!-- background-color: #DCDCDC;
+        color: black;
+        cursor: pointer;
+        padding:6px;
+        width: 150px;
+        height:30px;
+        border: none;
+        text-align:left;
+        outline: none;
+        font-size: 10px;
+        font-weight:900; -->
+      }
+
+      .active, .collapsible:hover {
+        background-color: black;
+        color:#DCDCDC;
+      }
+
+      .content {
+       padding:6px;
+        width:150px;
+        display: none;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="collapsible btn btn-dark">CILIOPHORA <img src="dda.png" style="height:9px;width:9px;margin-left:50px;margin-top:5px;"/></button>
+		<div class="content">
+			<button class="collapsible  btn btn-dark">POSTODESMATOPHORA</button>
+			<div class="content">
+				<button class="collapsible  btn btn-light">KARYORELICTEA</button>
+				<button class="collapsible  btn btn-light">HETEROTRICHEA</button>
+			</div>
+
+			<button class="collapsible  btn btn-dark">INTRAMACRONUCLEATA</button>
+			<div class="content">
+				<button class="collapsible  btn btn-dark">SAL</button>
+				<div class="content">
+					<button class="collapsible  btn btn-dark">CARIACOTRICHEA</button>
+					<div class="content">Cariacothrix</div>
+						<button class="collapsible  btn btn-dark">MESODINIIDAE</button>
+						<div class="content">Mesodinium</div>
+						<button class="collapsible  btn btn-dark">PHACODINIIDIA</button>
+						<div class="content">Phacodinium</div>
+						<button class="collapsible  btn btn-dark">SPIROTRICHEA</button>
+						<div class="content">
+							<form method="POST">
+								<input type="submit" class="btn btn-light" name="naam" value="Aponotohymena"><br/>
+								<input type="submit" class="btn btn-light" name="naam" value="Architricha"><br/>
+								<input type="submit" class="btn btn-light" name="naam" value="Amphisiella"><br/>
+								<input type="submit" class="btn btn-light" name="naam" value="Aspidisca"><br/>
+								<input type="submit" class="btn btn-light" name="naam" value="Gastrostylla"><br/>
+								<input type="submit" class="btn btn-light" name="naam" value="Histriculus"><br/>
+								<input type="submit" class="btn btn-light" name="naam" value="Oxytricha"><br/>
+								<input type="submit" class="btn btn-light" name="naam" value="Paraurostyla"><br/>
+								<input type="submit" class="btn btn-light" name="naam" value="Urostyla"><br/>
+								<input type="submit" class="btn btn-light" name="naam" value="Strombidium"><br/>
+							</form>
+						</div>
+						<button class="collapsible  btn btn-dark">LAMELLICORTICATA</button>
+						<div class="content">
+							<button class="collapsible  btn btn-dark">ARMOPHOREA</button>
+							<div class="content">
+								Metopus<br/>
+								Nyctotherus<br/>
+							</div>
+							<button class="collapsible  btn btn-dark">LITOSTOMATEA</button>
+							<div class="content">
+								<form method="POST">
+								<input type="submit" class="bt" name="naam" value="Dileptus"><br/>
+								<input type="submit" class="bt" name="naam" value="Lacrymaria"><br/>
+								<input type="submit" class="bt" name="naam" value="Didinium"><br/>
+								<input type="submit" class="bt" name="naam" value="Litonotus"><br/>
+								<input type="submit" class="bt" name="naam" value="Spathidium"><br/>
+								<input type="submit" class="bt" name="naam" value="Balantidium"><br/>
+								</form>
+							</div>
+						</div>
+				</div>
+				<button class="collapsible  btn btn-dark">CONthreeP</button>
+				<div class="content">
+					<button class="collapsible  btn btn-dark">COLPODEA</button>
+					<div class="content">
+						Bryometopus<br/>
+						Colpoda<br/>
+					</div>
+					<button class="collapsible  btn btn-dark">OLIGOHYMENOPHOREA</button>
+					<div class="content">
+						Tetrahymena<br/>
+						Colpidium<br/>
+						Frontonia<br/>
+						Paramecium<br/>
+						Vorticella<br/>
+						Uronema<br/>
+					</div>
+					<button class="collapsible  btn btn-dark">NASSOPHOREA</button>
+					<div class="content">
+						Colpodidium<br/>
+						Nassula<br/>
+					</div>
+					<button class="collapsible  btn btn-dark">PHYLLOPHARYNGEA</button>
+					<div class="content">
+						Synhymenia<br/>
+						Chilodonella<br/>
+					</div>
+					<button class="collapsible  btn btn-dark">PLAGIOPYLEA</button>
+					<div class="content">
+						Plagiopyla<br/>
+					</div>
+					<button class="collapsible  btn btn-dark">PROSTOMATEA</button>
+					<div class="content">
+						Coleps<br/>
+					</div>
+				</div>
+			</div>
+		</div>
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+
+    </script>
+  </body>
+</html>
